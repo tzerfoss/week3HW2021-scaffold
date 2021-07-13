@@ -3,19 +3,22 @@
     padding: 0;
 }
 
+
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
 
+
 html {
     box-sizing: border-box;
 }
 
+
 body {
-    /* Background pattern from Subtle Patterns */
-    /*background: url('img/ignasi_pattern_s.png');*/
+    background-image: none;
+    background: url('img/ignasi_pattern_s.png');
     font-family: "Open Sans", sans-serif;
     /*one Em roughly ten pixels (16 x 62.5% = 10)*/
     font-size: 62.5%;
@@ -23,20 +26,25 @@ body {
     margin: 0;
     text-align: center;
 }
-/* TODO: this container class in the center of the screen using flex-direction column */
+
 .container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-top: 8px;
 }
+
 
 ul > li {
     list-style: none;
 }
 
+
 .card,
 .reset-btn {
     cursor: pointer;
 }
+
 
 .btn {
     border-radius: 16px;
@@ -46,49 +54,60 @@ ul > li {
     padding: 12px;
 }
 
+
 /*----------------------------------
 Header
 ------------------------------------*/
+
 
 h1 {
     font-size: 48px;
     font-weight: 400;
 }
 
+
 h2 {
     font-size: 40px;
     font-weight: 600;
 }
 
+
 p {
     font-size: 24px;
 }
+
 
 h3 {
     font-weight: 400;
 }
 
+
 /*----------------------------------
 Section - Score Panel
 ------------------------------------*/
+
 
 .score-panel {
     font-size: 22px;
     padding: 16px 0 32px;
 }
 
+
 .star-rating > li {
     display: inline-block;
     padding: 8px;
 }
 
+
 .moves-counter {
     padding: 8px;
 }
 
+
 .reset-btn {
     background: #000;
 }
+
 
 .timer-container {
     background: #fff;
@@ -98,13 +117,16 @@ Section - Score Panel
     padding: 8px;
 }
 
+
 .timer {
     font-size: 16px;
 }
 
+
 /*----------------------------------
 Section - Modal
 ------------------------------------*/
+
 
 /* Modal (background) */
 .modal {
@@ -118,13 +140,15 @@ Section - Modal
     background-color: rgba(46, 61, 73, 0.6);
 }
 
+
 /* Modal Content/Box */
 /* TODO: Style this and make it look better */
 .modal-content {
     
-    margin: 5% auto;
+    margin: 25% auto;
     width: 80%;
 }
+
 
 /* The Close Button */
 #close {
@@ -133,6 +157,7 @@ Section - Modal
     font-size: 80px;
 }
 
+
 #close:hover,
 #close:focus {
     color: #5cf;
@@ -140,30 +165,37 @@ Section - Modal
     cursor: pointer;
 }
 
+
 /* Modal Image*/
+
 .modal-img {
     display: inline-block;
     margin: 16px 0 16px;
     width: 320px;
 }
 
+
 p.stats {
     font-weight: 600;
 }
 
+
 p.stats:last-child {
     margin-bottom: 16px;
 }
+
 
 .play-again-btn {
     background: #28e;
     margin-bottom: 16px;
 }
 
+
 /*----------------------------------
 Deck of Cards
 ------------------------------------*/
 /*Mobile first responsiveness*/
+
 .deck {
     background: #5cf;
     border-radius: 24px;
@@ -177,10 +209,12 @@ Deck of Cards
     width: 576px;
 }
 
+
 .deck,
 .card {
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
+
 
 .card {
     background: #fc4;
@@ -188,6 +222,7 @@ Deck of Cards
     height: 112px;
     width: 112px;
 }
+
 
 /*
 To disable the color highlight if and img is clicked
@@ -198,9 +233,11 @@ img {
     width: 96px;
 }
 
+
 .deck img {
     visibility: hidden;
 }
+
 
 .deck .card.flip {
     background: #fff;
@@ -210,10 +247,12 @@ img {
     pointer-events: none;
 }
 
+
 .flip img {
     background: #fff;
     visibility: visible;
 }
+
 
 .deck .card.match {
     /*background: #39d;*/
@@ -222,9 +261,11 @@ img {
     /*animation: pulse 1s;*/
 }
 
+
 .match img {
     background: #39d;
 }
+
 
 @keyframes pulse {
     0% {
@@ -238,7 +279,9 @@ img {
     }
 }
 
+
 @media screen and (min-width: 550px) {
+
 
     .deck  {
         height: 800px;
@@ -246,67 +289,82 @@ img {
         width: 800px;
     }
 
+
     .card {
         height: 160px;
         width: 160px;
     }
 
+
     .deck img {
         width: 144px;
     }
 
+
     .modal-content h2 {
         font-size: 64px;
     }
+
 
     .play-again-btn {
         font-size: 28px;
     }
 }
 
+
 /*----------------------------------
 Desktops
 ------------------------------------*/
 @media screen and (min-width: 800px) {
 
+
     h1 {
         font-size: 96px;
     }
 
+
     p {
         font-size: 36px;
     }
+
 
     .deck  {
         height: 1120px;
         width: 1120px;
     }
 
+
     .card {
         height: 240px;
         width: 240px;
     }
 
+
     .deck img {
         width: 208px;
     }
+
 
     .reset-btn {
         font-size: 32px;
     }
 
+
     .footer {
         font-size: 18px;
     }
+
 
     .modal-content h2 {
         font-size: 80px;
     }
 
+
     /* Modal Image*/
     .modal-img {
         width: 480px;
     }
+
 
     .play-again-btn {
         font-size: 32px;
